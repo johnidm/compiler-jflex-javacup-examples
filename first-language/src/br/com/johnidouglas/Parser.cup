@@ -1,0 +1,43 @@
+package br.com.johnidouglas;
+
+import java_cup.runtime.*;
+import java.io.*;
+import java.util.*;
+
+parser code {:
+
+	public void report_error(String message, Object info)  {
+	    System.out.println("Warning - " + message);
+	}
+	
+	public void report_fatal_error(String message, Object info)  {
+	    System.out.println("Error - " + message);
+	    System.exit(-1);
+	}
+
+:};
+
+terminal INICIO, FIM, PARA, ATE, FACA, NUMERO, ID, MULTIPLICACAO, ATRIBUICAO, VARIAVEL, PONTO_E_VIRGULA; 
+terminal DOIS_PONTOS, TIPO_INTEIRO, FUNCAO, ABRE_PARENTESES, FECHA_PARENTESES, VIRGULA;
+
+non terminal programa, laco, bloco, declaracoes, lacos, variavel, funcao, funcao_parametros;
+
+start with programa;
+
+programa ::= INICIO bloco FIM;
+
+bloco ::= bloco declaracoes | declaracoes;
+
+declaracoes ::= laco | variavel | funcao;
+
+laco ::= PARA NUMERO ATE NUMERO FACA ID ATRIBUICAO ID MULTIPLICACAO NUMERO;
+variavel ::= VARIAVEL ID DOIS_PONTOS TIPO_INTEIRO PONTO_E_VIRGULA;
+
+funcao ::= FUNCAO ID ABRE_PARENTESES funcao_parametros FECHA_PARENTESES;
+funcao_parametros ::= funcao_parametros VIRGULA ID | ID | ;
+
+
+
+
+
+

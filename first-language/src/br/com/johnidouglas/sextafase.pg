@@ -1,0 +1,15 @@
+inicio 
+
+	>>  johni : Inteiro;
+	>>  johni : Inteiro;
+	>>  johni : Inteiro;
+	>>  johni : Inteiro;
+
+    para 1 ate 10 faca 
+        valor <- valor * 10
+        
+    para 1 ate 10 faca 
+        valor <- valor * 10
+        
+    func ola(e,r)
+fim
