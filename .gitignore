@@ -1,6 +1,11 @@
 first-language/target
 first-language/.settings/
 first-language/bin/
-
 first-language/.classpath
 first-language/.project
+
+cool-language/target
+cool-language/.settings/
+cool-language/.classpath
+cool-language/.project
+cool-language/bin/
