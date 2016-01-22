@@ -9,3 +9,9 @@ cool-language/.settings/
 cool-language/.classpath
 cool-language/.project
 cool-language/bin/
+
+SimpleCalc/target
+SimpleCalc/.settings/
+SimpleCalc/.classpath
+SimpleCalc/.project
+SimpleCalc/bin/
